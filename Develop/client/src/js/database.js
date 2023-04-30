@@ -21,7 +21,7 @@ console.log('put request to database')
   const store = tx.objectStore('jate');
   const request = store.put({ jate: content });
   const result = await request;
-  console.log('data added to database', result);
+  console.log('data added to the database', result);
 };
 
 
