@@ -26,10 +26,11 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+// Added asset cache 
 registerRoute();
 
 ({ request }) => ['style', 'worker'].includes(request.destination),
+// Cache request inclduing name and plugins 
 new CacheRequest({
 cacheName: 'new-cache',
 plugins: [
